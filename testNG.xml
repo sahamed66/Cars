@@ -1,0 +1,8 @@
+<suite name="Cars" verbose="1" >
+    <test name="Regression1">
+    <classes>
+      <class name="com.honda.testcases.SignUp"/>
+      
+    </classes>
+  </test>
+</suite>

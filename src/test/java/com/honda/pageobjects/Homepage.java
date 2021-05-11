@@ -32,7 +32,12 @@ public class Homepage {
 	
 	@FindBy(xpath="//input[@value='Search']") 
 	private WebElement searchButton;
-
+	
+	private WebElement carsLogo;
+	
+	@FindBy(xpath="//a[@data-linkname='header-sign-up']") 
+	private WebElement signUpButton;
+	
 	public WebElement getStockType() {
 		return stockType;
 	}
@@ -59,6 +64,18 @@ public class Homepage {
 
 	public WebElement getSearchButton() {
 		return searchButton;
+	}
+
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public WebElement getCarsLogo() {
+		return carsLogo;
+	}
+
+	public WebElement getSignUpButton() {
+		return signUpButton;
 	}
 
 }

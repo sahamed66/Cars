@@ -22,26 +22,7 @@ public class carsDropdownTest extends commonUtil{
 	WebDriver driver;
 //	Homepage home = new Homepage(driver);
 
-	@BeforeSuite
-	public void setUp() {
-		getConfigProperty();
-		
-		if(prop.getProperty("browser").contentEquals("chrome")) {
-		System.setProperty("webdriver.chrome.driver", "./Browser/chromedriver.exe");// System property
-		driver = new ChromeDriver(); // default constructor of chrome driver class because no parameter here.
-		}
-		else if(prop.getProperty("browser").contentEquals("FF")) {
-			System.setProperty("webdriver.gecko.driver", "./Browser/geckodriver.exe");// System property
-			driver = new FirefoxDriver(); // default constructor of chrome driver class because no parameter here.
-				
-		}
-		
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("qaurl"));
-		initiatePages(driver);
-	}
-
+	
 	@Test
 	public void testCarsDropdown() {
 
@@ -67,9 +48,5 @@ public class carsDropdownTest extends commonUtil{
 		home.getSearchButton().click();
 	}
 
-		@AfterSuite
-		public void teardown() {
-		driver.quit();
-
-	}
+		
 }
